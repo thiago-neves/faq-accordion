@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --purple: hsl(281, 83%, 54%);
+}
+
+::selection {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: "Work Sans";
+  color: var(--dark-purple);
+}
+
+body {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--light-pink);
+  background-image: url("../assets/images/background-pattern-mobile.svg");
+}
+
+main {
+  gap: 16px;
+  width: 279px;
+  padding: 24px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+.title {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.title img {
+  width: 24px;
+  height: 24px;
+}
+
+.title h1 {
+  font-size: 32px;
+}
+
+article {
+  gap: 16px;
+  display: flex;
+  padding-bottom: 16px;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light-pink);
+}
+
+article:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.question-title {
+  gap: 16px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-title:hover h2 {
+  color: var(--purple);
+  transition: all 0.3s;
+}
+
+.question-title h2 {
+  font-size: 16px;
+}
+
+.paragraph {
+  color: var(--grayish-purple);
+}
+
+.attribution {
+  z-index: -1;
+  bottom: 5px;
+  position: fixed;
+}
+
+.attribution a {
+  color: var(--purple);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url("../assets/images/background-pattern-desktop.svg");
+  }
+
+  main {
+    padding: 34px;
+    width: 450px;
+  }
+
+  .title h1 {
+    font-size: 48px;
+  }
+
+  .title img {
+    height: 34px;
+    width: 34px;
+  }
+}
+
+.hidden {
+  display: none;
+}
